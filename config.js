@@ -1,3 +1,9 @@
-export const PORT = 5555;
+const dotenv = require("dotenv");
+dotenv.config();
 
-export const mongoDBURL = "mongodb+srv://samarthshukla994:Samarth1234@cluster0.as6hd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+module.exports = {
+    port: process.env.PORT || 3000,
+    mongodb_url: process.env.MONGODB_URL
+};
+
+
